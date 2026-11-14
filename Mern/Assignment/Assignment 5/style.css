@@ -1,0 +1,509 @@
+/* LEAF & BEAN — Assignment 06 */
+
+/* CSS Variables */
+:root {
+    --forest: #173f3d;
+    --green: #246052;
+    --teal: #176f73;
+    --mint: #e2eee7;
+    --cream: #f7f5ef;
+    --gold: #d9ad54;
+    --ink: #203d50;
+    --muted: #617789;
+    --white: #ffffff;
+    --line: #d1dde2;
+
+    --body-font: "DM Sans", sans-serif;
+    --heading-font: "Playfair Display", serif;
+}
+
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body */
+body {
+    background: #edf3f6;
+    color: var(--ink);
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+
+/* Header */
+.site-header {
+    position: relative;
+    z-index: 5;
+    background: var(--forest);
+    padding: 17px 4%;
+    border-bottom: 2px solid rgba(255,255,255,.18);
+}
+
+
+/* Logo */
+.brand {
+    display: inline-block;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+
+/* Navigation */
+.main-nav {
+    display: inline-block;
+    float: right;
+    padding-top: 3px;
+}
+
+.main-nav a,
+.site-footer a {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 17px;
+    font-size: 14px;
+}
+
+.main-nav a:hover,
+.site-footer a:hover {
+    color: #f1d38e;
+    text-decoration: underline;
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 390px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 54, 48, .88),
+            rgba(16, 54, 48, .42)
+        ),
+        url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85")
+        center 52% / cover no-repeat;
+
+    color: var(--white);
+    padding: 55px 5%;
+}
+
+
+/* Hero Overlay */
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 48, 43, .28),
+            transparent
+        );
+}
+
+
+/* Hero Text */
+.hero-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+
+/* Small Headings */
+.eyebrow {
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    margin-bottom: 10px;
+}
+
+.hero .eyebrow {
+    color: #f0d28e;
+}
+
+
+/* Main Headings */
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    line-height: 1.2;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 54px);
+    margin: 8px 0 13px;
+}
+
+.hero-copy > p:not(.eyebrow) {
+    font-size: 18px;
+    margin-bottom: 23px;
+}
+
+
+/* Buttons */
+.button {
+    display: inline-block;
+    border: 0;
+    border-radius: 5px;
+    background: var(--teal);
+    color: var(--white);
+    padding: 11px 23px;
+    font: 600 15px var(--body-font);
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.button:hover {
+    background: var(--gold);
+    color: #243b3b;
+    transform: translateY(-2px);
+}
+
+
+/* Hero Bottom Text */
+.hero-note {
+    position: absolute;
+    z-index: 2;
+    right: 4%;
+    bottom: 22px;
+    color: rgba(255,255,255,.85);
+    font-size: 10px;
+    letter-spacing: 1.3px;
+}
+
+
+/* Common Section */
+.section {
+    padding: 48px 5%;
+    background: var(--white);
+}
+
+.section h2 {
+    font-size: 31px;
+    color: var(--forest);
+    margin-bottom: 15px;
+}
+
+
+/* About Section */
+.about {
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+}
+
+.about > p:last-child {
+    max-width: 760px;
+    color: var(--muted);
+}
+
+
+/* Service Cards */
+.card-list {
+    margin: 22px -1%;
+    font-size: 0;
+}
+
+.service-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 31.2%;
+    min-height: 185px;
+    margin: 0 .95%;
+    padding: 22px;
+    font-size: 16px;
+    overflow: hidden;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* Card Hover */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(26, 55, 50, .12);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin: 8px 0;
+    color: var(--forest);
+}
+
+.service-card p {
+    color: var(--muted);
+}
+
+.card-number {
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Card Style 1 */
+.card-one {
+    background: #eff6f2;
+    border: 1px solid #cbded4;
+    border-radius: 14px;
+}
+
+
+/* Card Style 2 */
+.card-two {
+    background: #fff9eb;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+}
+
+
+/* Card Style 3 */
+.card-three {
+    background: #f1f5f4;
+    border: 2px solid #6b9288;
+    border-radius: 4px 22px 4px 22px;
+}
+
+
+/* Feature Image Section */
+.feature {
+    position: relative;
+    margin: 0 5% 42px;
+    height: 270px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--mint);
+}
+
+.feature img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Text Over Image */
+.feature-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    padding: 30px 25px 20px;
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(14, 42, 38, .88)
+        );
+}
+
+.feature-caption h2 {
+    font-size: 25px;
+}
+
+
+/* Gallery */
+.gallery {
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+}
+
+.gallery-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 31.5%;
+    height: 190px;
+    margin: 12px .7% 0 0;
+    overflow: hidden;
+    border: 4px solid var(--white);
+    border-radius: 9px;
+    box-shadow: 0 4px 13px rgba(0,0,0,.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition: transform .35s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+
+/* Contact Section */
+.contact {
+    background: var(--white);
+}
+
+.contact-intro {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+
+/* Contact Form */
+form {
+    max-width: 720px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #fbfdfc;
+    box-shadow: 0 5px 18px rgba(25, 57, 53, .06);
+}
+
+
+/* Form Labels */
+label {
+    display: block;
+    font-weight: 600;
+    margin: 12px 0 5px;
+}
+
+
+/* Form Inputs */
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aebfc7;
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--ink);
+    font: 15px var(--body-font);
+}
+
+
+/* Input Focus */
+input:focus,
+textarea:focus {
+    outline: 2px solid rgba(23, 111, 115, .22);
+    border-color: var(--teal);
+}
+
+textarea {
+    resize: vertical;
+    margin-bottom: 17px;
+}
+
+
+/* Address */
+.address {
+    margin-top: 22px;
+    color: var(--muted);
+}
+
+
+/* Footer */
+.site-footer {
+    background: var(--forest);
+    color: var(--white);
+    padding: 23px 5%;
+    overflow: hidden;
+}
+
+.site-footer p {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.site-footer nav {
+    float: right;
+}
+
+.site-footer a {
+    margin-left: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+    .main-nav {
+        display: block;
+        float: none;
+        margin-top: 10px;
+    }
+
+    .main-nav a {
+        margin: 0 12px 5px 0;
+    }
+
+    .hero {
+        min-height: 360px;
+        padding: 45px 6%;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .service-card,
+    .gallery-item {
+        display: block;
+        width: 100%;
+        margin: 14px 0;
+    }
+
+    .feature {
+        height: 220px;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .site-footer p,
+    .site-footer nav {
+        display: block;
+        float: none;
+    }
+
+    .site-footer nav {
+        margin-top: 10px;
+    }
+
+    .site-footer a {
+        margin: 0 12px 0 0;
+    }
+
+}

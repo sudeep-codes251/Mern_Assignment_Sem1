@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student learning dashboard built using CSS Grid.">
+    <meta name="author" content="Sudeep Saxena">
+    <title>Student Dashboard | Assignment 08</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+        <header class="dashboard-header">
+            <h2>STUDENT DASHBOARD</h2>
+
+            <nav class="dashboard-nav">
+                <a href="#overview">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#projects">Projects</a>
+                <a href="#settings">Settings</a>
+            </nav>
+        </header>
+
+        <aside class="dashboard-sidebar">
+            <h2>MY MENU</h2>
+
+            <nav class="sidebar-links">
+                <a href="#overview">🏠 Overview</a>
+                <a href="#courses">📚 Courses</a>
+                <a href="#projects">💻 Assignments</a>
+                <a href="#settings">⚙️ Settings</a>
+            </nav>
+
+            <div class="student-info">
+                <h3>Student Profile</h3>
+                <p>Name: Sudeep Saxena</p>
+                <p>Course: BTech CSE</p>
+                <p>Year: First Year</p>
+            </div>
+        </aside>
+
+        <main class="dashboard-main" id="overview">
+
+            <section class="welcome-section">
+                <p class="eyebrow">WELCOME BACK!</p>
+                <h1>Learning Dashboard</h1>
+                <p>Keep learning, keep growing and achieve your goals.</p>
+            </section>
+
+            <section id="courses">
+                <h2>My Learning Overview</h2>
+
+                <div class="dashboard-cards">
+
+                    <article class="dashboard-card">
+                        <span class="card-icon">🌐</span>
+                        <h3>HTML</h3>
+                        <p>8 Lessons</p>
+                        <span class="status">In Progress</span>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <span class="card-icon">🎨</span>
+                        <h3>CSS</h3>
+                        <p>12 Lessons</p>
+                        <span class="status">In Progress</span>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <span class="card-icon">💻</span>
+                        <h3>Projects</h3>
+                        <p>3 Active</p>
+                        <span class="status">Working</span>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="activity-section" id="projects">
+                <h2>Recent Activities</h2>
+
+                <article class="activity-item">
+                    <h3>Assignment 06</h3>
+                    <p>Business Landing Website completed.</p>
+                </article>
+
+                <article class="activity-item">
+                    <h3>Assignment 07</h3>
+                    <p>Flexbox Practice Pack completed.</p>
+                </article>
+
+                <article class="activity-item">
+                    <h3>Assignment 08</h3>
+                    <p>CSS Grid Practice Pack in progress.</p>
+                </article>
+            </section>
+
+            <section class="settings-section" id="settings">
+                <h2>My Learning Goal</h2>
+                <p>Complete HTML and CSS fundamentals and build responsive websites.</p>
+            </section>
+
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>&copy; 2026 Sudeep Saxena | Campus Learning Portal</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

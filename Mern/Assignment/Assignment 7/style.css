@@ -1,0 +1,566 @@
+
+/* =================================
+   ASSIGNMENT 08 - GRID PRACTICE PACK
+   ================================= */
+
+/* 1. Design Variables */
+
+:root {
+    --primary: #174247;
+    --secondary: #167477;
+    --mint: #dcece5;
+    --background: #edf3f6;
+    --white: #ffffff;
+    --text: #1c394e;
+    --muted: #607589;
+    --border: #cbd9e2;
+    --gold: #e2b34d;
+
+    --small-gap: 12px;
+    --medium-gap: 20px;
+    --large-gap: 30px;
+
+    --small-radius: 8px;
+    --large-radius: 14px;
+
+    --shadow: 0 4px 14px rgba(23, 66, 71, 0.09);
+}
+
+/* 2. General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.page-heading {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.page-heading h1 {
+    font-size: 36px;
+    color: var(--text);
+    margin: 8px 0;
+}
+
+.page-heading p {
+    color: var(--muted);
+}
+
+.eyebrow {
+    color: var(--secondary) !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+/* =================================
+   PAGE 1 - GALLERY
+   ================================= */
+
+.gallery-section {
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+
+    /* Three columns */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--medium-gap);
+}
+
+.gallery-item {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--small-radius);
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-item figcaption {
+    padding: 12px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* =================================
+   PAGE 2 - PRODUCT GRID
+   ================================= */
+
+.store-intro {
+    margin-bottom: 25px;
+}
+
+.store-intro p {
+    color: var(--muted);
+}
+
+/* Automatic responsive columns */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: var(--medium-gap);
+}
+
+.product-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--large-radius);
+
+    padding: 22px;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--secondary);
+    box-shadow: 0 8px 20px rgba(23, 66, 71, 0.15);
+}
+
+.product-icon {
+    background-color: var(--mint);
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.product-card p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.price {
+    color: var(--secondary);
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-button {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--white);
+
+    padding: 10px 18px;
+    border-radius: 6px;
+
+    margin-top: auto;
+
+    transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: var(--primary);
+}
+
+.contact-section {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: var(--mint);
+    border-radius: var(--large-radius);
+}
+
+.contact-section p {
+    margin-bottom: 15px;
+}
+
+/* =================================
+   PAGE 3 - DASHBOARD
+   ================================= */
+
+.dashboard-body {
+    min-height: 100vh;
+    padding: 25px;
+}
+
+.dashboard-layout {
+    max-width: 1400px;
+    margin: auto;
+
+    min-height: calc(100vh - 50px);
+
+    display: grid;
+
+    grid-template-columns: 230px 1fr;
+
+    grid-template-rows: 65px 1fr 55px;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+    gap: var(--medium-gap);
+}
+
+/* Dashboard Header */
+
+.dashboard-header {
+    grid-area: header;
+
+    background-color: var(--primary);
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 22px;
+    border-radius: var(--small-radius);
+}
+
+.dashboard-header h2 {
+    font-size: 19px;
+    margin: 0;
+}
+
+.dashboard-nav {
+    display: flex;
+    gap: 22px;
+}
+
+.dashboard-nav a {
+    color: var(--white);
+    font-size: 14px;
+}
+
+.dashboard-nav a:hover {
+    color: var(--gold);
+}
+
+/* Dashboard Sidebar */
+
+.dashboard-sidebar {
+    grid-area: sidebar;
+
+    background-color: var(--mint);
+    padding: 22px;
+
+    border-radius: var(--large-radius);
+    border: 1px solid var(--border);
+}
+
+.dashboard-sidebar h2 {
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-links a {
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar-links a:hover {
+    background-color: var(--white);
+    color: var(--secondary);
+}
+
+.student-info {
+    margin-top: 45px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.student-info h3 {
+    margin-bottom: 10px;
+}
+
+/* Dashboard Main */
+
+.dashboard-main {
+    grid-area: main;
+
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--large-radius);
+
+    padding: 25px;
+}
+
+.welcome-section {
+    background-color: var(--mint);
+    padding: 25px;
+    border-radius: var(--small-radius);
+    margin-bottom: 30px;
+}
+
+.welcome-section h1 {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+/* Dashboard Cards */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--medium-gap);
+    margin-top: 18px;
+}
+
+.dashboard-card {
+    background-color: #f3f8f6;
+
+    padding: 20px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--large-radius);
+
+    min-height: 170px;
+
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 28px;
+}
+
+.dashboard-card h3 {
+    margin: 8px 0;
+}
+
+.status {
+    display: inline-block;
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Recent Activities */
+
+.activity-section {
+    margin-top: 35px;
+}
+
+.activity-item {
+    padding: 15px;
+    margin-top: 12px;
+
+    border-left: 4px solid var(--secondary);
+    background-color: #f3f8f6;
+
+    border-radius: 5px;
+}
+
+.activity-item h3 {
+    margin-bottom: 5px;
+}
+
+.settings-section {
+    background-color: var(--mint);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: var(--small-radius);
+}
+
+/* Dashboard Footer */
+
+.dashboard-footer {
+    grid-area: footer;
+
+    background-color: var(--primary);
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--small-radius);
+}
+
+/* =================================
+   COMMON FOOTER
+   ================================= */
+
+.site-footer {
+    background-color: var(--primary);
+    color: var(--white);
+
+    text-align: center;
+    padding: 18px;
+
+    margin-top: 50px;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+@media (max-width: 850px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-layout {
+        grid-template-columns: 190px 1fr;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .page-heading h1 {
+        font-size: 27px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 230px;
+    }
+
+    .dashboard-body {
+        padding: 12px;
+    }
+
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto auto 1fr auto;
+
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .dashboard-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .dashboard-sidebar {
+        padding: 18px;
+    }
+
+    .sidebar-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .student-info {
+        margin-top: 20px;
+    }
+
+    .dashboard-main {
+        padding: 15px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section h1 {
+        font-size: 24px;
+    }
+
+}

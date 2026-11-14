@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Student Internship Application Form">
+    <meta name="author" content="Your Name">
+
+    <title>Application Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Application Form</h1>
+
+        <p class="subtitle">
+            Student Internship Application · * Required
+        </p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- PERSONAL DETAILS -->
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    minlength="3"
+                    required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                    required>
+
+                <label for="password">Password *</label>
+                <input type="password" id="password"
+                    name="password"
+                    placeholder="Enter password"
+                    minlength="8"
+                    required>
+
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone"
+                    name="phone"
+                    placeholder="9876543210"
+                    pattern="[0-9]{10}"
+                    required>
+
+                <label for="portfolio">Portfolio URL</label>
+                <input type="url" id="portfolio"
+                    name="portfolio"
+                    placeholder="https://example.com">
+
+                <label for="age">Age *</label>
+                <input type="number" id="age"
+                    name="age"
+                    min="16"
+                    max="60"
+                    placeholder="Enter your age"
+                    required>
+
+                <p class="choice-title">Gender</p>
+
+                <div class="options">
+                    <input type="radio" id="male"
+                        name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female"
+                        name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other"
+                        name="gender" value="other">
+                    <label for="other">Other / Prefer not to say</label>
+                </div>
+
+            </fieldset>
+
+            <!-- EDUCATION DETAILS -->
+            <fieldset>
+                <legend>Education</legend>
+
+                <label for="course">Course *</label>
+
+                <select id="course" name="course" required>
+                    <option value="">Select your course</option>
+                    <option value="btech">BTech - Computer Science</option>
+                    <option value="bca">BCA</option>
+                    <option value="bba">BBA</option>
+                    <option value="bsc">BSc</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="city">Preferred City (Datalist)</label>
+
+                <input list="cities" id="city"
+                    name="city"
+                    placeholder="Choose your city">
+
+                <datalist id="cities">
+                    <option value="Delhi">
+                    <option value="Mumbai">
+                    <option value="Bangalore">
+                    <option value="Noida">
+                    <option value="Moradabad">
+                </datalist>
+
+                <p class="choice-title">Skills</p>
+
+                <div class="options">
+                    <input type="checkbox" id="html"
+                        name="skills" value="HTML">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="css"
+                        name="skills" value="CSS">
+                    <label for="css">CSS</label>
+
+                    <input type="checkbox" id="javascript"
+                        name="skills" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                </div>
+
+            </fieldset>
+
+            <!-- UPLOAD AND EXTRAS -->
+            <fieldset>
+                <legend>Upload & Extras</legend>
+
+                <label for="date">Available From</label>
+                <input type="date" id="date"
+                    name="date">
+
+                <label for="time">Interview Time</label>
+                <input type="time" id="time"
+                    name="time">
+
+                <label for="resume">Upload Resume *</label>
+                <input type="file" id="resume"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required>
+
+                <label for="salary">
+                    Expected Monthly Stipend:
+                    ₹<span id="salaryValue">10000</span>
+                </label>
+
+                <input type="range" id="salary"
+                    name="salary"
+                    min="5000"
+                    max="20000"
+                    step="1000"
+                    value="10000"
+                    oninput="document.getElementById('salaryValue').textContent=this.value">
+
+                <label for="color">Favourite Colour</label>
+                <input type="color" id="color"
+                    name="color"
+                    value="#176f73">
+
+                <label for="message">Why would you like to join?</label>
+                <textarea id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Write something about yourself..."></textarea>
+
+            </fieldset>
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+                <button type="submit">Submit Application</button>
+
+                <button type="reset" class="reset">
+                    Reset
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>© Sudeep  Saxena  | Student Internship Form</p>
+    </footer>
+
+</body>
+</html>

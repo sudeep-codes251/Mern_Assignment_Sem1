@@ -1,0 +1,212 @@
+
+/* CSS VARIABLES */
+
+:root {
+    --primary: #193b55;
+    --secondary: #176f73;
+    --background: #edf3f7;
+    --white: #ffffff;
+    --stripe: #edf4f8;
+    --brand-bg: #dcebea;
+    --border: #cbd9e2;
+    --text: #29475e;
+
+    --spacing: 12px;
+    --font-size: 15px;
+    --radius: 10px;
+}
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 30px;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.tag {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 34px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #60758a;
+    font-size: 16px;
+}
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+/* TABLE CONTAINER */
+
+.table-container {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow-x: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    font-size: var(--font-size);
+}
+
+/* CAPTION */
+
+caption {
+    padding: var(--spacing);
+    color: var(--secondary);
+    font-weight: bold;
+    caption-side: bottom;
+}
+
+/* TABLE HEADER */
+
+thead {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+th {
+    padding: 13px 10px;
+    text-align: left;
+    border: 1px solid var(--border);
+}
+
+thead th {
+    font-weight: 600;
+}
+
+/* TABLE BODY */
+
+td {
+    padding: 11px 10px;
+    border: 1px solid var(--border);
+}
+
+/* ALTERNATE ROW COLOURS */
+
+tbody tr:nth-child(even) {
+    background-color: var(--stripe);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+/* HOVER EFFECT */
+
+tbody tr:hover {
+    background-color: #d5e9e8;
+    transition: background-color 0.2s ease;
+}
+
+/* BRAND COLUMN */
+
+.brand {
+    background-color: var(--brand-bg);
+    color: var(--primary);
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: left;
+}
+
+/* TABLE FOOTER */
+
+tfoot {
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+}
+
+tfoot th,
+tfoot td {
+    padding: 13px 10px;
+    border: 1px solid var(--primary);
+}
+
+/* NOTE BOX */
+
+.note {
+    background-color: #dcebee;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 15px;
+    margin-top: 25px;
+    color: var(--primary);
+}
+
+/* FOOTER */
+
+footer {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    color: #60758a;
+    font-size: 14px;
+    padding: 15px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .table-container {
+        border-radius: 6px;
+    }
+}

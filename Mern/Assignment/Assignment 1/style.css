@@ -1,0 +1,185 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #edf3f7;
+    color: #222;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 15px auto;
+    max-width: 1000px;
+    border: 1px solid #d4e0e8;
+}
+
+header h1 {
+    color: #193b55;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+header p {
+    color: #60758a;
+    font-size: 17px;
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #174ea6;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e08b35;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #d9e3eb;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h2 {
+    color: #193b55;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    color: #315b78;
+    margin-bottom: 8px;
+}
+
+/* Profile Image */
+#about img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #d5e5e5;
+    margin: 10px 0;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+li {
+    padding: 2px;
+}
+
+/* Definition List */
+dl {
+    margin-top: 15px;
+}
+
+dt {
+    font-weight: bold;
+    color: #193b55;
+}
+
+dd {
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+/* Project */
+article {
+    background-color: #eff6fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+#projects img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Contact */
+#contact a {
+    color: #174ea6;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #dceaf0;
+    color: #31536a;
+    border-radius: 10px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
